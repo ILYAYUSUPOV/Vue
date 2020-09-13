@@ -105,7 +105,8 @@ export default {
           limit: this.limit
         }
         await this.$store.dispatch('updateCategory', categoryData)
-        this.$message('категория успешно обновлена')
+        this.$message('Категория успешно обновлена')
+        this.$emit('updated', categoryData )
       } catch (e) {}
     }
   },
